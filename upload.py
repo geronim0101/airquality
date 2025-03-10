@@ -50,9 +50,9 @@ def build_insert_query(reading_loc):
 
     query = f"""
     INSERT INTO airquality_sensor 
-    (temperature, humidity, CO2, PM25, PM10, TVOC, HCHO, reading_loc_id, reading_date) 
+    (temperature, humidity, CO2, PM25, PM10, TVOC, HCHO, reading_loc_id, reading_date, created_at, updated_at) 
     VALUES 
-    ({temperature}, {humidity}, {CO2}, {PM25}, {PM10}, {TVOC}, {HCHO}, {reading_loc}, '{reading_date}');
+    ({temperature}, {humidity}, {CO2}, {PM25}, {PM10}, {TVOC}, {HCHO}, {reading_loc}, '{reading_date}','{reading_date}','{reading_date}');
     """
     return query
 
